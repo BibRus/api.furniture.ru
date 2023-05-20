@@ -1,0 +1,25 @@
+{
+    "name": "bibaevruslan/api.furniture.ru",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bibaev Ruslan",
+            "email": "bibaevsurlan@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "php-di/slim-bridge": "*",
+        "tuupola/slim-jwt-auth": "^3.1",
+        "vlucas/phpdotenv": "^5.5",
+        "firebase/php-jwt": "^5.5",
+        "respect/validation": "^2.2"
+    }
+}
