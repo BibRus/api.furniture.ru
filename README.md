@@ -1,4 +1,4 @@
 # Серверная часть магазина  «Furniture»
 
 ### Схема базы данных
-![Furniture Data Base Scheme](docs/scheme.png)
+<img src="docs/scheme.png" alt="Furniture Data Base Scheme" width="400"/>
