@@ -6,7 +6,7 @@ namespace App\App;
 
 use App\Controller\ApiStatusController;
 use App\Controller\AuthController;
-use App\Controller\GroupController;
+use App\Controller\ProductController;
 use Slim\Routing\RouteCollectorProxy;
 
 
@@ -16,10 +16,11 @@ $app->post('/registration',[AuthController::class, 'register']);
 $app->post('/login', [AuthController::class, 'login']);
 
 $app->group('/api', function (RouteCollectorProxy $api) {
-    $api->get('/groups', [GroupController::class, 'getAll']);
-    $api->get('/groups/{id:[0-9]+}', [GroupController::class, 'getById']);
-    $api->post('/groups', [GroupController::class, 'save']);
-
+    $api->post('/products', [ProductController::class, 'save']);
+    $api->post('/products/{id:[0-9]+}', [ProductController::class, 'update']);
+    $api->get('/products/{id:[0-9]+}', [ProductController::class, 'getById']);
+    $api->get('/products', [ProductController::class, 'getAll']);
+    $api->delete('/products/{id:[0-9]+}', [ProductController::class, 'delete']);
 });
 
 

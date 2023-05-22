@@ -1,4 +1,7 @@
 *.iml
 .idea
+public/images/products/*
+!public/images/products/.gitkeep
+.env
 vendor
 out

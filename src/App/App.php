@@ -5,7 +5,6 @@ declare(strict_types=1);
 use App\Exception\HttpNotFoundException;
 use App\Middleware\CorsProvider;
 use App\Middleware\JsonWrapper;
-use App\Middleware\SuccessResponseWrapper;
 use DI\Bridge\Slim\Bridge;
 use DI\Container;
 

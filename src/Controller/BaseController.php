@@ -34,15 +34,14 @@ abstract class BaseController {
         }
     }
 
-    protected function moveUploadedFile($directory, UploadedFile $uploadedFile): string
-    {
+    protected function moveUploadedFile($directory, UploadedFile $uploadedFile): string {
         $extension = pathinfo($uploadedFile->getClientFilename(), PATHINFO_EXTENSION);
-        $basename = bin2hex(random_bytes(8));
-        $filename = sprintf('%s.%0.8s', $basename, $extension);
-        $path = $directory . DIRECTORY_SEPARATOR . $filename;
+        $baseName = bin2hex(random_bytes(8));
+        $fileName = sprintf('%s.%0.8s', $baseName, $extension);
+        $path = $directory . '/' . $fileName;
         $uploadedFile->moveTo($path);
-        if ($uploadedFile->getSize() > 9000) {
-            throw new Exception('The photo size is large');
+        if ($uploadedFile->getSize() > 64000) {
+            throw new Exception('Слишком большой размер изображения');
         }
         return $path;
     }
