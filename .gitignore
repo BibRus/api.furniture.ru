@@ -2,6 +2,6 @@
 .idea
 /public/images/products/*
 !/public/images/products/.gitkeep
-!.env
+.env
 vendor
 out
